@@ -2,4 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Rango hello")
+    context_dict = {'boldmessage': 'CAKE!'}
+    return render(request, 'rango/index.html', context=context_dict)
